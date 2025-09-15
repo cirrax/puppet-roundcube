@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe 'roundcube::db' do
@@ -26,6 +28,7 @@ describe 'roundcube::db' do
         .with_mode('0640')
     }
   end
+
   on_supported_os.each do |os, os_facts|
     context "on #{os}" do
       let(:facts) { os_facts }
@@ -47,7 +50,7 @@ describe 'roundcube::db' do
       context 'without dbconfig file' do
         let :params do
           default_params.merge(
-            dbconfig_inc: '',
+            dbconfig_inc: ''
           )
         end
 

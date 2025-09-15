@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe 'roundcube::install' do
@@ -15,6 +17,7 @@ describe 'roundcube::install' do
         .with_ensure(params[:package_ensure])
     }
   end
+
   on_supported_os.each do |os, os_facts|
     context "on #{os}" do
       let(:facts) { os_facts }
@@ -30,8 +33,8 @@ describe 'roundcube::install' do
       context 'with non defaults' do
         let :params do
           default_params.merge(
-            packages: ['somepackage', 'roundcube'],
-            package_ensure: 'absent',
+            packages: %w[somepackage roundcube],
+            package_ensure: 'absent'
           )
         end
 

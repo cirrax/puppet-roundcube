@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe 'roundcube::config' do
@@ -43,7 +45,7 @@ describe 'roundcube::config' do
             config_file: '/tmp/test',
             owner: 'someone',
             group: 'somegroup',
-            mode: '4242',
+            mode: '4242'
           )
         end
 

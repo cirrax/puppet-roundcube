@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe 'roundcube::db::mysql' do
@@ -32,13 +34,13 @@ describe 'roundcube::db::mysql' do
         it_behaves_like 'roundcube::db::mysql shared examples'
       end
 
-      context 'with non  defaults' do
+      context 'with non defaults' do
         let :params do
           default_params.merge(
             dbname: 'mydb',
             dbuser: 'myuser',
             dbpass: 'secret-password',
-            host: 'myhost',
+            host: 'myhost'
           )
         end
 
