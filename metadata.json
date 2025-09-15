@@ -44,7 +44,7 @@
   ],
   "requirements": [
     {
-      "name": "puppet",
+      "name": "openvox",
       "version_requirement": ">=4.0.0 < 8.0.0"
     }
   ],
@@ -52,8 +52,5 @@
     "roundcube",
     "webmail",
     "mail"
-  ],
-  "pdk-version": "3.4.0",
-  "template-url": "https://github.com/puppetlabs/pdk-templates#main",
-  "template-ref": "heads/main-0-gd5f5ac1"
+  ]
 }

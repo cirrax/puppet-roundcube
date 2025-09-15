@@ -1,10 +1,5 @@
 # roundcube puppet module
 
-[![Build Status](https://travis-ci.org/cirrax/puppet-roundcube.svg?branch=master)](https://travis-ci.org/cirrax/puppet-rouncube)
-[![Puppet Forge](https://img.shields.io/puppetforge/v/cirrax/roundcube.svg?style=flat-square)](https://forge.puppetlabs.com/cirrax/roundcube)
-[![Puppet Forge](https://img.shields.io/puppetforge/dt/cirrax/roundcube.svg?style=flat-square)](https://forge.puppet.com/cirrax/roundcube)
-[![Puppet Forge](https://img.shields.io/puppetforge/e/cirrax/roundcube.svg?style=flat-square)](https://forge.puppet.com/cirrax/roundcube)
-[![Puppet Forge](https://img.shields.io/puppetforge/f/cirrax/roundcube.svg?style=flat-square)](https://forge.puppet.com/cirrax/roundcube)
 
 #### Table of Contents
 

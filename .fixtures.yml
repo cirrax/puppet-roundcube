@@ -5,5 +5,3 @@ fixtures:
     mysql: puppetlabs/mysql
     stdlib: puppetlabs/stdlib
     concat: puppetlabs/concat
-  symlinks:
-    roundcube: "#{source_dir}"
