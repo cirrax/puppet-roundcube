@@ -22,7 +22,19 @@ $config['<%= $index %>'] = array('<%= $value.join("','") -%>');
 <% if ( $value =~ Hash ) { -%>
 $config['<%= $index %>'] = array(
 <% $value.each | $k, $v | { -%>
-   '<%= $k -%>' => '<%= $v -%>',
+<%   if $v =~ String { -%>
+   '<%= $k %>' => '<%= $v %>',
+<%   } elsif $v =~ Integer { -%>
+   '<%= $k %>' => <%= $v %>,
+<%   } elsif $v =~ Boolean { -%>
+   '<%= $k %>' => <%= $v ? { true => 'true', false => 'false' } %>,
+<%   } elsif $v =~ Array { -%>
+   '<%= $k %>' => array('<%= $v.join("','") %>'),
+<%   } elsif $v =~ Hash { -%>
+   '<%= $k %>' => array(<% $v.each | $kk, $vv | { -%> '<%= $kk %>' => <%= $vv %>, <% } -%>),
+<%   } else { -%>
+   '<%= $k %>' => '<%= $v %>',
+<%   } -%>
 <% } -%>
 );
 <% } -%>
